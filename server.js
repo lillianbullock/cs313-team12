@@ -12,7 +12,6 @@ const connectionString = process.env.DATABASE_URL;
 const { Pool } = require('pg')
 const pool = new Pool({connectionString: connectionString});
 
-
 /**************************************
 * Session
 **************************************/
@@ -137,5 +136,4 @@ function verifyLogin(req, res, next) {
 
     res.status(401);
     res.json(params);
-
 }
